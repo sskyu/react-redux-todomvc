@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import Header from '../components/Header';
-// import MainSection from '../components/MainSection';
+import MainSection from '../components/MainSection';
 import * as TodoActions from '../actions/todos';
 
 function mapStateToProps(state) {
@@ -28,6 +28,7 @@ class App extends Component {
     return (
       <div>
         <Header addTodo={actions.addTodo} />
+        <MainSection todos={todos} actions={actions} />
       </div>
     );
   }
